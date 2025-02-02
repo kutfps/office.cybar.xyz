@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Office 2010 Professional Plus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px; /* Add space from the bottom */
+        }
+
+        h1 {
+            color: #333;
+        }
+        .info-box {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px auto; /* Center info boxes */
+            width: 100%;
+            max-width: 350px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        .info-box h2 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+
+        .button-group {
+            margin: 20px 0;
+        }
+
+        button {
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 8px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        button.green {
+            background-color: #4CAF50; /* Green */
+        }
+
+        button.green:hover {
+            background-color: #45a049;
+        }
+
+        button.blue {
+            background-color: #2196F3; /* Blue */
+        }
+
+        button.blue:hover {
+            background-color: #0b7dda;
+        }
+
+        button.red {
+            background-color: #f44336; /* Red */
+        }
+
+        button.red:hover {
+            background-color: #c62828;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .download-buttons-container {
+            margin-top: 20px;
+        }
+
+        .download-servers-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .download-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .download-options button {
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            position: relative;
+        }
+
+        @media (max-width: 600px) {
+            .info-box {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .button-group button {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Microsoft Office 2010 Professional Plus</h1>
+
+        <div class="button-group">
+            <button id="singlePartButton" class="green">x64 (64-Bit)</button>
+            <button id="multiPartButton" class="blue">x32 (86-Bit)</button>
+        </div>
+        
+        <div id="infoBox64" class="info-box hidden">
+            <h2>File Information (x64)</h2>
+            <p><strong>Filename:</strong> Microsoft Office 2010 Pro Plus x64.zip</p>
+            <p><strong>Size:</strong> 2.29 GB</p>
+            <p><strong>MD5 Code:</strong> 7291768af41ad31a5326a8911fc08f2d</p>
+        </div>
+
+        <div id="infoBox32" class="info-box hidden">
+            <h2>File Information (x32)</h2>
+            <p><strong>Filename:</strong> Microsoft Office 2010 Pro Plus x86.zip</p>
+            <p><strong>Size:</strong> 2.02 GB</p>
+            <p><strong>MD5 Code:</strong> 4f9c65f44970f61de07bba10aaed523c</p>
+        </div>
+
+        <div id="singlePartButtons" class="download-buttons-container hidden">
+            <div class="download-servers-title">Download Servers (x64)</div>
+            <div class="download-options">
+                <button class="green" onclick="handleDownload('google', 'x64')">Google Drive</button>
+                <button class="green" onclick="handleDownload('10gbps', 'x64')">10GBPS</button>
+                <button class="green" onclick="handleDownload('mediafire', 'x64')">Mediafire</button>
+                <button class="green" onclick="handleDownload('mega', 'x64')">Mega.nz</button>
+                <button class="green" onclick="handleDownload('multiup', 'x64')">Multiup</button>
+                <button class="green" onclick="handleDownload('filen', 'x64')">Filen</button>
+            </div>
+        </div>
+
+        <div id="multiPartButtons" class="download-buttons-container hidden">
+            <div class="download-servers-title">Download Servers (x32)</div>
+            <div class="download-options">
+                <button class="red" onclick="handleDownload('google', 'x32')">Google Drive</button>
+                <button class="red" onclick="handleDownload('10gbps', 'x32')">10GBPS</button>
+                <button class="red" onclick="handleDownload('mediafire', 'x32')">Mediafire</button>
+                <button class="red" onclick="handleDownload('mega', 'x32')">Mega.nz</button>
+                <button class="red" onclick="handleDownload('multiup', 'x32')">Multiup</button>
+                <button class="red" onclick="handleDownload('filen', 'x32')">Filen</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function handleDownload(service, version) {
+            const urls = {
+                google: {
+                    x64: 'https://drive.google.com/uc?export=download&id=1QmTj_fLMBV5BH8pHFdZr5dE0COQYX7mZ',
+                    x32: 'https://drive.google.com/uc?export=download&id=1zc0Kfe9fFRa8qONLpxUHptmMjmPPSdPf'
+                },
+                '10gbps': {
+                    x64: 'https://s1-p.cybar.xyz/S28/Microsoft%20Office%202010%20Pro%20Plus%20x64/Microsoft%20Office%202010%20Pro%20Plus%20x64.zip',
+                    x32: 'https://s1-p.cybar.xyz/S28/Microsoft%20Office%202010%20Pro%20Plus%20x86/Microsoft%20Office%202010%20Pro%20Plus%20x86.zip'
+                },
+                mediafire: {
+                    x64: 'https://www.mediafire.com/file/ohqpfgy9s33g7yv/Microsoft+Office+2010+Pro+Plus+x64.zip/file',
+                    x32: 'https://www.mediafire.com/file/cdokyujcq3hbdtj/Microsoft_Office_2010_Pro_Plus_x86.zip/file'
+                },
+                mega: {
+                    x64: 'https://mega.nz/file/gIw0TLiK#pL4D9EJRvLyGvwrMk7cHpKbn_pQTGtkDn9CEgnem_pw',
+                    x32: 'https://mega.nz/file/MQJzXIDT#oVlNQt_BDIJXpW9bwp6ecjg9_VravuJ-RRExljZSXcc'
+                },
+                multiup: {
+                    x64: 'https://multiup.io/download/dc9a47dcb91457c6323e7f78fd885f74/Microsoft%20Office%202010%20Pro%20Plus%20x64.zip',
+                    x32: 'https://multiup.io/download/3c53778ee0cece1a55ab1b2b84265576/Microsoft%20Office%202010%20Pro%20Plus%20x86.zip'
+                },
+                filen: {
+                    x64: 'https://drive.filen.io/d/e7ee8083-5ee5-4955-930a-5031399ec1b6#M0kfEUKP1V4CFoINWNS51J5lh44tcKBT',
+                    x32: 'https://drive.filen.io/d/ab5144d3-41a3-4bde-8749-50aabdb8dc4c#oyMYli56tcefwDEQoY0es5302SYimGmh'
+                }
+            };
+
+            window.open(urls[service][version], '_blank');
+        }
+
+        document.getElementById('singlePartButton').addEventListener('click', function() {
+            document.getElementById('singlePartButtons').style.display = 'block';
+            document.getElementById('infoBox64').style.display = 'block';
+            document.getElementById('multiPartButtons').style.display = 'none';
+            document.getElementById('infoBox32').style.display = 'none';
+        });
+
+        document.getElementById('multiPartButton').addEventListener('click', function() {
+            document.getElementById('singlePartButtons').style.display = 'none';
+            document.getElementById('infoBox64').style.display = 'none';
+            document.getElementById('multiPartButtons').style.display = 'block';
+            document.getElementById('infoBox32').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

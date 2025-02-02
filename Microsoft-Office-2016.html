@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Office 2016 Professional Plus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px; /* Add space from the bottom */
+        }
+
+        h1 {
+            color: #333;
+        }
+        .info-box {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px auto; /* Center info boxes */
+            width: 100%;
+            max-width: 350px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        .info-box h2 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+
+        .button-group {
+            margin: 20px 0;
+        }
+
+        button {
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 8px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        button.green {
+            background-color: #4CAF50; /* Green */
+        }
+
+        button.green:hover {
+            background-color: #45a049;
+        }
+
+        button.blue {
+            background-color: #2196F3; /* Blue */
+        }
+
+        button.blue:hover {
+            background-color: #0b7dda;
+        }
+
+        button.red {
+            background-color: #f44336; /* Red */
+        }
+
+        button.red:hover {
+            background-color: #c62828;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .download-buttons-container {
+            margin-top: 20px;
+        }
+
+        .download-servers-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .download-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .download-options button {
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            position: relative;
+        }
+
+        @media (max-width: 600px) {
+            .info-box {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .button-group button {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Microsoft Office 2016 Professional Plus</h1>
+
+        <div class="button-group">
+            <button id="singlePartButton" class="green">x64 (64-Bit)</button>
+            <button id="multiPartButton" class="blue">x32 (86-Bit)</button>
+        </div>
+        
+        <div id="infoBox64" class="info-box hidden">
+            <h2>File Information (x64)</h2>
+            <p><strong>Filename:</strong> Microsoft Office 2016 Professional Plus 32-bit.zip</p>
+            <p><strong>Size:</strong> 950 MB</p>
+            <p><strong>MD5 Code:</strong> 2fa48139050e4c9cf8ed0ab667c9dc7c</p>
+        </div>
+
+        <div id="infoBox32" class="info-box hidden">
+            <h2>File Information (x32)</h2>
+            <p><strong>Filename:</strong> Microsoft Office 2016 Professional Plus 32-bit.zip</p>
+            <p><strong>Size:</strong> 810 MB</p>
+            <p><strong>MD5 Code:</strong> 5fd0e10959e0b87004953d3a77d86e14</p>
+        </div>
+
+        <div id="singlePartButtons" class="download-buttons-container hidden">
+            <div class="download-servers-title">Download Servers (x64)</div>
+            <div class="download-options">
+                <button class="green" onclick="handleDownload('10gbps', 'x64')">10GBPS</button>
+                <button class="green" onclick="handleDownload('mediafire', 'x64')">Mediafire</button>
+                <button class="green" onclick="handleDownload('mega', 'x64')">Mega.nz</button>
+                <button class="green" onclick="handleDownload('multiup', 'x64')">Multiup</button>
+                <button class="green" onclick="handleDownload('filen', 'x64')">Filen</button>
+            </div>
+        </div>
+
+        <div id="multiPartButtons" class="download-buttons-container hidden">
+            <div class="download-servers-title">Download Servers (x32)</div>
+            <div class="download-options">
+                <button class="red" onclick="handleDownload('10gbps', 'x32')">10GBPS</button>
+                <button class="red" onclick="handleDownload('mediafire', 'x32')">Mediafire</button>
+                <button class="red" onclick="handleDownload('mega', 'x32')">Mega.nz</button>
+                <button class="red" onclick="handleDownload('multiup', 'x32')">Multiup</button>
+                <button class="red" onclick="handleDownload('filen', 'x32')">Filen</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function handleDownload(service, version) {
+            const urls = {
+                '10gbps': {
+                    x64: 'https://s1-p.cybar.xyz/S28/Microsoft%20Office%202016%20Professional%20Plus%2064-bit/Microsoft%20Office%202016%20Professional%20Plus%2064-bit.zip',
+                    x32: 'https://s1-p.cybar.xyz/S28/Microsoft%20Office%202016%20Professional%20Plus%2032-bit/Microsoft%20Office%202016%20Professional%20Plus%2032-bit.zip'
+                },
+                mediafire: {
+                    x64: 'https://www.mediafire.com/file/usnj0ee4q6g6bnw/Microsoft_Office_2016_Professional_Plus_64-bit.zip/file',
+                    x32: 'https://www.mediafire.com/file/zu1jzoiu6759xui/Microsoft_Office_2016_Professional_Plus_32-bit.zip/file'
+                },
+                mega: {
+                    x64: 'https://mega.nz/file/ENBjSLxC#FGSKQP9l-e99OCYxESGpgCoCRmr8adnQNhME1R1NbjQ',
+                    x32: 'https://mega.nz/file/QEhCmDoQ#2AqYVeD1W7uVnYReelXaTDm1DnYYW4R4MSQDxiTMAEY'
+                },
+                multiup: {
+                    x64: 'https://multiup.io/download/ace31e76b04dd44124a26886473e721a/Microsoft%20Office%202016%20Professional%20Plus%2064-bit.zip',
+                    x32: 'https://multiup.io/download/0d374131cd04c3b99c22816cf9b82c58/Microsoft%20Office%202016%20Professional%20Plus%2032-bit.zip'
+                },
+                filen: {
+                    x64: 'https://drive.filen.io/d/795590b0-d3e1-46ab-89c8-9375481271ab#af0CeK6S6eBHeSkPNqZlVAW8LNYk8uzM',
+                    x32: 'https://drive.filen.io/d/c2b67bf9-7322-499a-8bb3-4936510bd282#eONnZRZIHJTPfoMZnPN3iXnt6Eh7sTOx'
+                }
+            };
+
+            window.open(urls[service][version], '_blank');
+        }
+
+        document.getElementById('singlePartButton').addEventListener('click', function() {
+            document.getElementById('singlePartButtons').style.display = 'block';
+            document.getElementById('infoBox64').style.display = 'block';
+            document.getElementById('multiPartButtons').style.display = 'none';
+            document.getElementById('infoBox32').style.display = 'none';
+        });
+
+        document.getElementById('multiPartButton').addEventListener('click', function() {
+            document.getElementById('singlePartButtons').style.display = 'none';
+            document.getElementById('infoBox64').style.display = 'none';
+            document.getElementById('multiPartButtons').style.display = 'block';
+            document.getElementById('infoBox32').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

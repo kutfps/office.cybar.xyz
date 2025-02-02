@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .info-box {
+            display: inline-block;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            width: 90%;
+            max-width: 350px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-box h2 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+
+        .download-buttons-container {
+            margin-top: 20px;
+        }
+
+        .download-servers-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .download-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .download-options button {
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            position: relative;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 8px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            background-color: #4CAF50; /* Green */
+        }
+
+        .download-options button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            .info-box {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .download-options button {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Microsoft Office 2003 Professional</h1>
+
+        <div class="info-box">
+            <h2>File Information</h2>
+            <p><strong>Filename:</strong> Microsoft Office 2003 Professional.zip</p>
+            <p><strong>Size:</strong> 293 MB</p>
+            <p><strong>MD5 Code:</strong> 51774b1be525f55e975e7aee4b22b7da</p>
+        </div>
+
+        <div class="download-buttons-container">
+            <div class="download-servers-title">Download Servers</div>
+            <div class="download-options">
+                <button onclick="handleServerClick('10gbps')">10GBPS</button>
+                <button onclick="handleServerClick('mediafire')">MediaFire</button>
+                <button onclick="handleServerClick('mega')">Mega.nz</button>
+                <button onclick="handleServerClick('multiup')">MultiUp</button>
+                <button onclick="handleServerClick('pixeldrain')">Pixeldrain</button>
+                <button onclick="handleServerClick('filen')">Filen</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function handleServerClick(service) {
+            const urls = {
+                '10gbps': 'https://s1-p.cybar.xyz/S28/Microsoft%20Office%202003%20Professional/Microsoft%20Office%202003%20Professional.zip',
+                mediafire: 'https://www.mediafire.com/file/63ee3t7di732ycw/Microsoft_Office_2003_Professional.zip/file',
+                mega: 'https://mega.nz/file/1QQ2WSBI#Lg7WiJyJwhEqVKZLjz6v0UIzq2ZMGe0TMJA5Gkqc9tQ',
+                multiup: 'https://multiup.io/download/aa93a909d0a5242526e3db1df0cf22e2/Microsoft%20Office%202003%20Professional.zip',
+                pixeldrain: 'https://pixeldrain.com/u/p4iE1VK8',
+                filen: 'https://drive.filen.io/d/fdc3e327-30f3-470e-a3a0-893663dffb97#uochOY2hhrobxnRhof0HoPfPm3eeyxX7'
+            };
+
+            window.open(urls[service], '_blank');
+        }
+    </script>
+</body>
+</html>

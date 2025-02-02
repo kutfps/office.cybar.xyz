@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Office LTSC 2021 Professional Plus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .info-box {
+            display: inline-block;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            width: 90%;
+            max-width: 350px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-box h2 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+
+        .download-buttons-container {
+            margin-top: 20px;
+        }
+
+        .download-servers-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .download-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .download-options button {
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            position: relative;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 8px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            background-color: #4CAF50; /* Green */
+        }
+
+        .download-options button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            .info-box {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .download-options button {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Microsoft Office LTSC 2021 Professional Plus</h1>
+
+        <div class="info-box">
+            <h2>File Information</h2>
+            <p><strong>Filename:</strong> Microsoft Office LTSC 2021 Professional Plus.zip</p>
+            <p><strong>Size:</strong> 2.24 GB</p>
+            <p><strong>MD5 Code:</strong> 5ef5a054a7ea0f84d849e735b1273f57</p>
+        </div>
+
+        <div class="download-buttons-container">
+            <div class="download-servers-title">Download Servers</div>
+            <div class="download-options">
+                <button onclick="handleServerClick('gdrive')">Google Drive</button>
+                <button onclick="handleServerClick('10gbps')">10GBPS</button>
+                <button onclick="handleServerClick('mediafire')">MediaFire</button>
+                <button onclick="handleServerClick('mega')">Mega.nz</button>
+                <button onclick="handleServerClick('multiup')">MultiUp</button>
+                <button onclick="handleServerClick('pixeldrain')">Pixeldrain</button>
+                <button onclick="handleServerClick('filen')">Filen</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function handleServerClick(service) {
+            const urls = {
+                gdrive: 'https://drive.google.com/uc?export=download&id=1PDb4cb8jg6z-mwQ1pL_cjr8gEL1qKdog',
+                '10gbps': 'https://s1-p.cybar.xyz/S28/Microsoft%20Office%20LTSC%202021%20Professional%20Plus/Microsoft%20Office%20LTSC%202021%20Professional%20Plus.zip',
+                mediafire: 'https://www.mediafire.com/file/e0rzf0awpfycoka/Microsoft_Office_LTSC_2021_Professional_Plus.zip/file',
+                mega: 'https://mega.nz/file/ZdIwSKZS#EVILrWHUOGIlBpiW7mdghXVpkdrVMSMcMbLoQHdIxMw',
+                multiup: 'https://multiup.io/download/5c307c9d177bbc6085c22599b05f00c8/Microsoft%20Office%20LTSC%202021%20Professional%20Plus.zip',
+                pixeldrain: 'https://pixeldrain.com/u/KhFS3viH',
+                filen: 'https://drive.filen.io/d/2b318994-117f-4730-835c-cdbe61175407#gvzKJftN8eNCO31C2gTLhLcaHlXLabzf'
+            };
+
+            window.open(urls[service], '_blank');
+        }
+    </script>
+</body>
+</html>
